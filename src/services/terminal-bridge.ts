@@ -81,6 +81,12 @@ export class SshPseudoTerminal implements vscode.Pseudoterminal {
   }
 }
 
+export type OpenTerminalResult = {
+  sessionId: string
+  terminal: vscode.Terminal
+  pty: SshPseudoTerminal
+}
+
 const sessionTerminals = new Map<string, { terminal: vscode.Terminal; pty: SshPseudoTerminal }>()
 
 export function getSessionTerminal(sessionId: string) {
