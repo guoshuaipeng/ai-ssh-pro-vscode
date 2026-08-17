@@ -4,12 +4,14 @@
 
 ### Added
 - SFTP rename and remote file edit/save-back
-- Docker logs, inspect, compose up/down
-- Inventory open / delete / search
-- Move session profile to folder
-- Broadcast input to all active SSH sessions
-- Edit snippets; MCP inventory install guide
-- Marketplace metadata (icon, repository, changelog)
+- Docker logs, inspect, compose up/down, swarm restart/scale
+- Inventory open / delete / search / add service
+- Move session profile to folder; broadcast to SSH sessions
+- Copy terminal snapshot; edit snippets; MCP inventory guide
+- Marketplace metadata (publisher `guoshuaipeng`, repository, icon)
+
+### Changed
+- Docker tree nodes carry sessionId for compose/swarm actions
 
 ## [0.1.0] - 2026-08-17
 
