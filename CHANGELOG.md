@@ -1,15 +1,21 @@
 # Changelog
 
-## 0.1.1
+## [0.1.1] - 2026-08-17
 
 ### Added
-- SFTP rename + Edit & save (write back on document save)
-- Docker: logs, inspect, compose up/down
-- Inventory: open host, delete host, search
-- Sessions: move profile, broadcast to all SSH sessions; reconnect / recording on active session menu
-- Snippets: edit title/body
-- MCP inventory guide command
-- Marketplace metadata (publisher, repository, icon, homepage)
+- SFTP rename and remote file edit/save-back
+- Docker logs, inspect, compose up/down
+- Inventory open / delete / search
+- Move session profile to folder
+- Broadcast input to all active SSH sessions
+- Edit snippets; MCP inventory install guide
+- Marketplace metadata (icon, repository, changelog)
 
-### Changed
-- Version bump for marketplace packaging
+## [0.1.0] - 2026-08-17
+
+### Added
+- Initial VS Code / Cursor extension (no AI chat)
+- SSH multi-session with ProxyJump, port forward, host-key TOFU
+- Native Pseudoterminal sessions
+- SFTP panel, Docker tree, host inventory, snippets
+- Session import/export and recording
