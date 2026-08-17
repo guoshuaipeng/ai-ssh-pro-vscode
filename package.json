@@ -166,6 +166,18 @@
         "title": "Docker Compose Up/Down"
       },
       {
+        "command": "aiSshPro.dockerSwarmAction",
+        "title": "Docker Swarm Service Action"
+      },
+      {
+        "command": "aiSshPro.addInventoryService",
+        "title": "Add Host Service"
+      },
+      {
+        "command": "aiSshPro.copyTerminalSnapshot",
+        "title": "AI-SSH-Pro: Copy Terminal Snapshot"
+      },
+      {
         "command": "aiSshPro.addSnippet",
         "title": "Add Snippet",
         "icon": "$(add)"
@@ -348,6 +360,11 @@
           "group": "1_actions"
         },
         {
+          "command": "aiSshPro.dockerSwarmAction",
+          "when": "view == aiSshPro.docker && viewItem == dockerSwarm",
+          "group": "1_actions"
+        },
+        {
           "command": "aiSshPro.runSnippet",
           "when": "view == aiSshPro.snippets && viewItem == snippet",
           "group": "inline@1"
@@ -373,9 +390,14 @@
           "group": "1_mod@1"
         },
         {
-          "command": "aiSshPro.deleteInventoryHost",
+          "command": "aiSshPro.addInventoryService",
           "when": "view == aiSshPro.inventory && viewItem == inventoryHost",
           "group": "1_mod@2"
+        },
+        {
+          "command": "aiSshPro.deleteInventoryHost",
+          "when": "view == aiSshPro.inventory && viewItem == inventoryHost",
+          "group": "1_mod@3"
         }
       ],
       "commandPalette": [
@@ -410,7 +432,8 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "lint": "tsc -p ./ --noEmit",
-    "package": "vsce package --no-dependencies",
+    "package": "vsce package --no-dependencies --allow-missing-repository",
+    "publish:vscode": "vsce publish --allow-missing-repository",
     "mcp:inventory": "node scripts/mcp-inventory-server.mjs"
   },
   "dependencies": {
